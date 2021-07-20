@@ -35,7 +35,7 @@ int upperBound(vector<int> arr, int target) {
 			begin=mid+1;
 		}
 		else if(arr[mid] ==target){
-			begin=mid+1;7 
+			begin=mid+1;
 		}
 		else if(arr[mid] > target){
 			end=mid;
@@ -47,16 +47,16 @@ int upperBound(vector<int> arr, int target) {
 
 int main(){
 	int m, n;
-	cin >> n >> m;
+	cin >> m >> n;
 	
-	for(int i = 0; i <n; i++){
+	for(int i = 0; i <m; i++){
 		int value;
 		cin >>value;
 		arr.push_back(value);
 	}
-	int i1 = lowerBound(arr,x);
-	int i2 = upperBound(arr,x);
-	if ((i1>=arr.size()||(arr[i1]!=x))
+	int i1 = lowerBound(arr,n);
+	int i2 = upperBound(arr,n);
+	if ((i1>=arr.size())||(arr[i1]!=n))
 		cout << -1 <<endl;
 	else
 		cout << (i2-i1) << endl;
